@@ -1,6 +1,21 @@
 import * as yup from "yup";
 
-export function createYupSchema(schema, config) {
+interface SchemaType {
+  [index: number]: string;
+}
+
+interface ValidationType {
+  params: string[];
+  type: string;
+}
+
+interface ConfigType {
+  id: number;
+  validationType: string;
+  validations: ValidationType[];
+}
+
+export function createYupSchema(schema: SchemaType, config: ConfigType) {
   const { id, validationType, validations = [] } = config;
   if (!yup[validationType]) {
     return schema;
