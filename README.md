@@ -9,3 +9,7 @@ tsc ./index.ts
 ```
 
 After the above steps, you will find a generated `index.js` file in the current directory. Enjoy :)
+
+## Future
+
+I am archiving this Git repository, since no further work is planned. This is just an example.
